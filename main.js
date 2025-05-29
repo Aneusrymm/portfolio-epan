@@ -1,5 +1,5 @@
 
-// Mobile menu functionality
+
 document.addEventListener('DOMContentLoaded', function() {
     const menuButton = document.getElementById('menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.classList.toggle('hidden');
     });
 
-    // Close mobile menu when clicking a link
+    
     const mobileLinks = mobileMenu.querySelectorAll('a');
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Smooth scrolling for navigation links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -37,27 +37,27 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Get form data
+        
         const formData = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
             message: document.getElementById('message').value
         };
 
-        // Basic form validation
+        
         if (!formData.name || !formData.email || !formData.message) {
             alert('Harap isi semua kolom');
             return;
         }
 
-        // Email validation
+        
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(formData.email)) {
             alert('Harap masukkan alamat email yang valid');
             return;
         }
 
-        // Kirim data ke Google Apps Script
+        
         fetch('', {
             method: 'POST',
             headers: {
