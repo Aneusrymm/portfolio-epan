@@ -58,7 +58,7 @@ if (contactForm) {
         }
 
         // Kirim data ke Google Apps Script
-        fetch('https://script.google.com/macros/s/AKfycbzjg03LvAUpDQBctQtOokgsKr-MK5zXMJCd0b6mHDb77skSspNrqyHlovQzQiCPPjhh/exec', {
+        fetch('', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
