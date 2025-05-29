@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Administration Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        /* Animated gradient background */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .gradient-animate {
+            background: linear-gradient(45deg, #1e3a8a, #4c1d95, #6b7280);
+            background-size: 200% 200%;
+            animation: gradientShift 15s ease infinite;
+        }
+        /* Hover effect for section containers */
+        .section-container:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <script src="main.js" defer></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-lg fixed w-full z-10">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-extrabold text-white">Muhamad Refan Zahir</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-blue-400 transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-blue-400 transition duration-300">About</a>
+                    <a href="#education" class="text-gray-300 hover:text-blue-400 transition duration-300">Education</a>
+                    <a href="#skills" class="text-gray-300 hover:text-blue-400 transition duration-300">Skills</a>
+                    <a href="#contact" class="text-gray-300 hover:text-blue-400 transition duration-300">Contact</a>
+                </div>
+                <button class="md:hidden" id="menu-button">
+                    <i class="fas fa-bars text-white text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-gray-800 bg-opacity-90 backdrop-blur-md" id="mobile-menu">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#home" class="block text-gray-300 hover:text-blue-400 transition">Home</a>
+                <a href="#about" class="block text-gray-300 hover:text-blue-400 transition">About</a>
+                <a href="#education" class="block text-gray-300 hover:text-blue-400 transition">Education</a>
+                <a href="#skills" class="block text-gray-300 hover:text-blue-400 transition">Skills</a>
+                <a href="#contact" class="block text-gray-300 hover:text-blue-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center bg-gradient-to-br from-blue-600 to-indigo-900">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center" data-aos="fade-up">
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">Public Administration Student</h1>
+                    <p class="text-lg md:text-xl text-gray-200 mb-8">Passionate about driving positive change through public service and policy innovation</p>
+                    <a href="#contact" class="bg-blue-500 text-white px-8 py-3 rounded-full hover:bg-blue-600 transition duration-300 shadow-lg">Get in Touch</a>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0">
+                    <img src="2.jpg" alt="Profile" class="rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 gradient-animate">
+        <div class="container mx-auto px-6 section-container transition-all duration-300">
+            <h2 class="text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">About Me</h2>
+            <div class="bg-gray-900 bg-opacity-60 backdrop-blur-lg rounded-2xl shadow-xl p-8" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-gray-200 leading-relaxed mb-6 text-lg">
+                    I'm a dedicated Public Administration student with a passion for optimizing government operations and advancing public policy. My academic background and hands-on projects have honed my skills in analysis, strategy, and leadership.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <div class="bg-gray-800 bg-opacity-60 p-6 rounded-xl" data-aos="fade-right">
+                        <h3 class="text-2xl font-semibold text-white mb-4">Career Objectives</h3>
+                        <ul class="list-disc list-inside text-gray-200 space-y-3">
+                            <li>Drive innovation in public sector operations</li>
+                            <li>Shape effective and inclusive policies</li>
+                            <li>Lead transformative administrative initiatives</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 bg-opacity-60 p-6 rounded-xl" data-aos="fade-left">
+                        <h3 class="text-2xl font-semibold text-white mb-4">Interests</h3>
+                        <ul class="list-disc list-inside text-gray-200 space-y-3">
+                            <li>Policy Innovation</li>
+                            <li>Smart Governance</li>
+                            <li>Community Engagement</li>
+                            <li>Digital Transformation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 gradient-animate">
+        <div class="container mx-auto px-6 section-container transition-all duration-300">
+            <h2 class="text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">Education</h2>
+            <div class="bg-gray-900 bg-opacity-60 backdrop-blur-lg rounded-2xl shadow-xl p-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-white">Bachelor of Public Administration</h3>
+                    <p class="text-gray-200">Politeknik Negeri Bandung</p>
+                    <p class="text-gray-300">Expected Graduation: 2026</p>
+                    <div class="mt-6">
+                        <h4 class="font-medium text-white mb-3">Relevant Coursework:</h4>
+                        <ul class="list-disc list-inside text-gray-200 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <li>Public Policy Analysis</li>
+                            <li>Administrative Law</li>
+                            <li>Government Operations</li>
+                            <li>Public Finance</li>
+                            <li>Organizational Behavior</li>
+                            <li>Research Methods</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 gradient-animate">
+        <div class="container mx-auto px-6 section-container transition-all duration-300">
+            <h2 class="text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">Skills & Competencies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 bg-opacity-60 backdrop-blur-lg rounded-2xl shadow-xl p-6" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-semibold text-white mb-4">Administrative Skills</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-3"></i>
+                            <span class="text-gray-200">Document Management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-3"></i>
+                            <span class="text-gray-200">Policy Analysis</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-3"></i>
+                            <span class="text-gray-200">Research & Reporting</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 bg-opacity-60 backdrop-blur-lg rounded-2xl shadow-xl p-6" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-semibold text-white mb-4">Technical Skills</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-3"></i>
+                            <span class="text-gray-200">MS Excel & Data Tools</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-3"></i>
+                            <span class="text-gray-200">Data Analysis</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-3"></i>
+                            <span class="text-gray-200">Digital Communication</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 bg-opacity-60 backdrop-blur-lg rounded-2xl shadow-xl p-6" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-semibold text-white mb-4">Soft Skills</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-3"></i>
+                            <span class="text-gray-200">Communication</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-3"></i>
+                            <span class="text-gray-200">Team Collaboration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-3"></i>
+                            <span class="text-gray-200">Problem Solving</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-animate">
+        <div class="container mx-auto px-6 section-container transition-all duration-300">
+            <h2 class="text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">Contact Me</h2>
+            <div class="max-w-xl mx-auto bg-gray-900 bg-opacity-60 backdrop-blur-lg rounded-2xl shadow-xl p-8 text-gray-200" data-aos="fade-up" data-aos-delay="100">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg font-semibold text-white mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 bg-gray-800 bg-opacity-50 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-semibold text-white mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 bg-gray-800 bg-opacity-50 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your Email" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-lg font-semibold text-white mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 bg-gray-800 bg-opacity-50 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300 shadow-lg">Send Message</button>
+                </ MegaDodo Publicationsform>
+                <div class="mt-6 text-center">
+                    <p>Or reach me directly at: <a href="mailto:refanzahir251105@gmail.com" class="text-blue-400 hover:underline">refanzahir251105@gmail.com</a></p>
+                    <p>Phone: 0895 1885 2528</p>
+                    <p>Address: Bandung, Jawa Barat, Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">© 2025 Muhamad Nabil Firdaus. All rights reserved.</p>
+            <div class="mt-4 space-x-6">
+                <a href="https://www.linkedin.com/in/muhamad-nabil-firdaus-327344292" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="https://github.com/Aneusrymm" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-github fa-lg"></i></a>
+                <a href="https://www.instagram.com/nabilfrdauss/" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>
